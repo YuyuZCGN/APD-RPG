@@ -20,13 +20,13 @@
       <div class="section-head">
         <h2 id="attrs-title">Atributos Primários</h2>
         <div class="points" id="points" aria-live="polite">
-          <span class="points-label">Pontos disponíveis</span>
-          <span class="points-value"><b id="pointsLeft">4</b> / 4</span>
+          <span class="points-label">Pontos distribuídos</span>
+          <span class="points-value"><b id="pointsSpent">0</b></span>
         </div>
       </div>
 
       <div class="attr-grid">
-        <article class="card attr" data-attr="corpo">
+        <article class="card attr themed t-corpo" data-attr="corpo">
           <h3>Corpo</h3>
           <div class="value" id="val-corpo">0</div>
           <div class="controls">
@@ -35,7 +35,7 @@
           </div>
         </article>
 
-        <article class="card attr" data-attr="mente">
+        <article class="card attr themed t-mente" data-attr="mente">
           <h3>Mente</h3>
           <div class="value" id="val-mente">0</div>
           <div class="controls">
@@ -44,7 +44,7 @@
           </div>
         </article>
 
-        <article class="card attr" data-attr="persona">
+        <article class="card attr themed t-persona" data-attr="persona">
           <h3>Persona</h3>
           <div class="value" id="val-persona">0</div>
           <div class="controls">
@@ -53,7 +53,7 @@
           </div>
         </article>
 
-        <article class="card attr" data-attr="espirito">
+        <article class="card attr themed t-espirito" data-attr="espirito">
           <h3>Espírito</h3>
           <div class="value" id="val-espirito">0</div>
           <div class="controls">
@@ -110,7 +110,33 @@
           <div class="stat-value"><span id="out-desloc">5</span><small>m</small></div>
           <p class="formula">5 + (Corpo × 1,5) metros</p>
         </article>
+
+        <article class="card stat damage themed t-corpo" id="damageCard">
+          <h3>Dado de Dano</h3>
+          <div class="dmg-body">
+            <div class="stat-value"><span id="out-dano">1d4 + 0</span></div>
+            <button type="button" class="roll-btn" id="rollDamage">Rolar dano</button>
+          </div>
+          <p class="formula">Corpo 0–2: 1d4 + Corpo · Corpo 3–5: 2d4 + Corpo</p>
+        </article>
       </div>
+    </section>
+
+    <!-- PERÍCIAS -->
+    <section class="section" aria-labelledby="skills-title">
+      <div class="section-head">
+        <h2 id="skills-title">Perícias</h2>
+        <button type="button" class="reset" id="resetSkills">Redefinir perícias</button>
+      </div>
+      <div class="panels" id="skillPanels"></div>
+    </section>
+
+    <!-- ESPÍRITO -->
+    <section class="section" aria-labelledby="espirito-title">
+      <div class="section-head">
+        <h2 id="espirito-title">Espírito</h2>
+      </div>
+      <div id="espiritoRoot"></div>
     </section>
   </main>
 
